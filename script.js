@@ -11,6 +11,22 @@ let winner = document.querySelector('.winner');
 let leftSide = document.querySelector('.left');
 let rightSide = document.querySelector('.right');
 
+const instruction = document.querySelector('.instruction');
+const closeBtn = document.querySelector('.closeBtn');
+const hintBtn = document.querySelector('.hintBtn');
+
+hintBtn.addEventListener('click',() => {
+    instruction.style.display = 'block';
+    closeBtn.style.display = 'block';
+    hintBtn.style.display = 'none';
+})
+
+closeBtn.addEventListener('click',() => {
+    instruction.style.display = 'none';
+    closeBtn.style.display = 'none';
+    hintBtn.style.display = 'block';
+})
+
 
 
 btnRollDice.addEventListener('click', () => {

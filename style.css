@@ -9,6 +9,46 @@ body{
     justify-content:center;
     height: 100vh;
 }
+.instruction {
+    background-color: purple;
+    position:absolute;
+    color: white;
+    width: 50vw;
+    height: 60vh;
+    border-radius: 15px;
+    overflow:hidden;
+    font-size:20px;
+    padding: 40px;
+    line-height:2;
+    font-weight: 400;
+    font-family: sans-serif;
+    z-index: 100;
+    display: none;  
+}
+.closeBtn{
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border:none ;
+    z-index: 101;
+    cursor: pointer;
+    display: none;
+}
+.hintBtn{
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border:none ;
+    z-index: 102;
+    cursor: pointer;
+    display: block;
+}
 
 .container {
     background: rgba(214, 214, 214, 0.322);
@@ -20,6 +60,7 @@ body{
     width: 50vw;
     height: 60vh;
     border-radius: 15px;
+    overflow:hidden;
 }
 
 /* left */
@@ -264,3 +305,212 @@ height:20%;
     padding-bottom: 10px;
 }
 
+
+
+
+
+
+
+/* media */
+
+@media only screen and (max-width:900px) {
+    .container {
+        background: rgba(214, 214, 214, 0.322);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items:center;
+        justify-content:space-between;
+        position: relative;
+        width: 90vw;
+        height: 70vh;
+        border-radius: 15px;
+        overflow:hidden;
+}
+    .bg_transparet2 {
+        background:rgba(251, 251, 251, 0);
+        height:115%;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: space-around;
+        opacity: 1;
+        transition: background-color 0.5s ease-in;
+}
+    .left {
+    background:rgba(251, 251, 251, 0.219);
+    height:115%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-around;
+    transition: background-color 0.5s ease-in;
+}
+    .container .totalplayer1 {
+    text-align: center;
+    color:#8a172e;
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 10px;
+}
+   .container .currentplayer1{
+    text-align: center;
+    color:rgb(207, 207, 207);
+    font-size: 15px; 
+    line-height: 5px;
+}   .container .totalplayer2{
+    text-align: center;
+    color:#8a172e;
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 10px;
+}
+    .container .currentplayer2{
+    text-align: center;
+    color:rgb(207, 207, 207);
+    font-size: 15px; 
+    line-height: 5px;
+}
+    .container .p1 {
+    text-align: center;
+    color:black;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 10px;
+ }
+    .container .p2 {
+    text-align: center;
+    color:rgb(207, 207, 207);
+    font-size: 15px;
+    line-height: 5px;
+ }
+    .container .bottom {
+    background-color: rgba(199, 34, 97, 0.781);
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    width:52%;
+    height:80px;
+    
+    } 
+    .test {
+    position: fixed;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:space-around;
+    width: 50vw;
+    height: 40vh;
+    z-index: 100;
+}
+    .test .btnNewGame {
+    font-size: 15px;
+    color:black;
+    font-weight: 400;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    width: 110px;
+    height: 30px;  
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.329);
+    transition: all 0.3s ease 0.2s;
+}
+    .btnNewGame2 {
+    margin-bottom: 390px;
+    border-radius: 50px;
+    width: 110px;
+    height: 160px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 7px solid rgba(128, 0, 128, 0.26);
+    cursor: pointer;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.329);
+}
+    .test .btnRollDice {
+    font-size: 15px;
+    color:black;
+    font-weight: 500;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    width: 100px;
+    height: 30px; 
+    opacity: 1; 
+    display: block;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.329);    
+}
+
+    .test .btnhold {
+    font-size: 15px;
+    color:black;
+    font-weight: 400;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    padding-bottom: 2px;
+    width: 80px;
+    height: 30px;
+    opacity: 1; 
+    display: block;  
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.329);
+}
+    .images {
+    background-position:  center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    width: 70px;
+    height: 70px;
+    display: none;
+    border-radius: 10px;
+    /* transition: all 0.3s ease 0.2s; */
+}
+    .active {
+    display: block;
+}
+
+    .instruction {
+    background-color: purple;
+    position:absolute;
+    color: white;
+    width: 72vw;
+    height: 60vh;
+    border-radius: 15px;
+    overflow:hidden;
+    font-size:15px;
+    padding: 20px;
+    line-height:1.7;
+    font-weight: 400;
+    font-family: sans-serif;
+    z-index: 100;
+    display: none;  
+}
+    .closeBtn{
+    position: fixed;
+    top: 160px;
+    right: 50px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border:none ;
+    z-index: 101;
+    cursor: pointer;
+    display: none;
+}
+    .hintBtn{
+    position: fixed;
+    top: 140px;
+    right: 50px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border:none ;
+    z-index: 102;
+    cursor: pointer;
+    display: block;
+}
+
+}
